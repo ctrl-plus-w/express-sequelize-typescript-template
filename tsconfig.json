@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@class/*": ["./src/classes/*"],
+      "@helper/*": ["./src/helpers/*"],
+      "@logger/*": ["./src/loggers/*"],
+      "@type/*": ["./src/types/*"],
+      
+      "@middleware/*": ["./src/middlewares/*"],
+
+      "@model/*": ["./src/database/models/*"],
+      "@database/*": ["./src/database/*"],
+
+      "@controller/*": ["./src/api/controllers/*"],
+      "@route/*": ["./src/api/routes/*"],
+    }
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+  }
+}
