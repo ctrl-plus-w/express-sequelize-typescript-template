@@ -43,9 +43,9 @@ The project includes eight commands. Three for the development stage and four fo
    |  +- setup.ts
    |  +- update.ts
    |
-	 +- helpers
-	 |  +- ...
-	 |
+   +- helpers
+   |  +- ...
+	|
    +- loggers
    |  +- main.ts
    |
