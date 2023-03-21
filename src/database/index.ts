@@ -8,7 +8,7 @@ dotenv.config();
 
 // Get the database directory depending on the node environment
 const isProduction = process.env.NODE_ENV === 'production';
-const databaseFolder = isProduction ? './dist/database' : './src/database';
+const databaseFolder = isProduction ? 'dist/database' : 'src/database';
 
 const sequelize = new Sequelize({
 	dialect: 'sqlite',
@@ -18,13 +18,15 @@ const sequelize = new Sequelize({
 });
 
 const funcs = ['init', 'associate'];
-const files = glob.sync(join(databaseFolder, isProduction ? '*.js' : '*.ts'));
+const files = glob.sync(isProduction ? '*.js' : '*.ts', {
+	cwd: join(databaseFolder, 'models'),
+});
 
 // Execute the `init` and `associate` functions of the models
 for (const func of funcs) {
 	for (const file of files) {
 		// eslint-disable-next-line @typescript-eslint/no-var-requires
-		const model = require(file);
+		const model = require('./models/' + file);
 		if (func in model) model[func](sequelize);
 	}
 }

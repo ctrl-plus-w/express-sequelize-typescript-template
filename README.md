@@ -153,4 +153,4 @@ This model file should contains some things:
 - The `init` exported function which should run the `Model.init()` function with the models attributes, the sequelize instance, the databse table name and the model table name.
 - The optional `associate` exported function which define the relations between models.
 
-The project includes a snippet that you can call with the `Sequelize Model`, `sequelize-model` and `sm` keywors. You only needs to enter the model name as lowercase and it fill the model template.
+The project includes a snippet that you can call with the `Sequelize Model`, `sequelize-model` and `sm` keywors. You only needs to enter the model name as lowercase and it fill the model template. Others models are available for declaring associations between models. You can check the `.vscode/model.code-snippets` file.

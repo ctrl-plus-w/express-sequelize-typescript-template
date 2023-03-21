@@ -42,5 +42,52 @@
 		,
 		"description": "Database sequelize model template.",
 		"scope": "typescript"
+	},
+
+	"Sequelize Models Association Has Many": {
+		"prefix": ["sequelize-models-has-many", "smhm"],
+		"body": [
+		"declare get$1s: HasManyGetAssociationsMixin<${1/(.*)/${1:/capitalize}/}>;",
+		"declare count${1/(.*)/${1:/capitalize}/}s: HasManyCountAssociationsMixin;",
+		"declare has${1/(.*)/${1:/capitalize}/}: HasManyHasAssociationMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+		"declare has${1/(.*)/${1:/capitalize}/}s: HasManyHasAssociationsMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+		"declare set${1/(.*)/${1:/capitalize}/}s: HasManySetAssociationsMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+		"declare add${1/(.*)/${1:/capitalize}/}: HasManyAddAssociationMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+		"declare add${1/(.*)/${1:/capitalize}/}s: HasManyAddAssociationsMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+		"declare remove${1/(.*)/${1:/capitalize}/}: HasManyRemoveAssociationMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+		"declare remove${1/(.*)/${1:/capitalize}/}s: HasManyRemoveAssociationsMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+		"declare create${1/(.*)/${1:/capitalize}/}: HasManyCreateAssociationMixin<${1/(.*)/${1:/capitalize}/}>;",
+		],
+		"description": "Sequelize model association declaration for Has Many.",
+		"scope": "typescript"
+	},
+
+	"Sequelize Models Association Belongs To": {
+		"prefix": ["sequelize-models-belongs-to", "smbt"],
+		"body": [
+			"declare get$1: BelongsToGetAssociationMixin<${1/(.*)/${1:/capitalize}/}>;",
+			"declare set${1/(.*)/${1:/capitalize}/}: BelongsToSetAssociationMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+			"declare create${1/(.*)/${1:/capitalize}/}: BelongsToCreateAssociationMixin<${1/(.*)/${1:/capitalize}/}>;",
+		],
+		"description": "Sequelize model association declaration for Belongs To.",
+		"scope": "typescript"
+	},
+
+	"Sequelize Models Association Belongs To Many": {
+		"prefix": ["sequelize-models-belongs-to-many", "smbtm"],
+		"body": [
+			"declare get$1s: BelongsToManyGetAssociationsMixin<${1/(.*)/${1:/capitalize}/}>;",
+			"declare count${1/(.*)/${1:/capitalize}/}s: BelongsToManyCountAssociationsMixin;",
+			"declare has${1/(.*)/${1:/capitalize}/}: BelongsToManyHasAssociationMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+			"declare has${1/(.*)/${1:/capitalize}/}s: BelongsToManyHasAssociationsMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+			"declare set${1/(.*)/${1:/capitalize}/}s: BelongsToManySetAssociationsMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+			"declare add${1/(.*)/${1:/capitalize}/}: BelongsToManyAddAssociationMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+			"declare add${1/(.*)/${1:/capitalize}/}s: BelongsToManyAddAssociationsMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+			"declare remove${1/(.*)/${1:/capitalize}/}: BelongsToManyRemoveAssociationMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+			"declare remove${1/(.*)/${1:/capitalize}/}s: BelongsToManyRemoveAssociationsMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
+			"declare create${1/(.*)/${1:/capitalize}/}: BelongsToManyCreateAssociationMixin<${1/(.*)/${1:/capitalize}/}>;",
+		],
+		"description": "Sequelize model association declaration for Belongs To.",
+		"scope": "typescript"
 	}
 }
