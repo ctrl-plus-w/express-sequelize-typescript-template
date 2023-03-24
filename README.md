@@ -99,7 +99,7 @@ export const userTableName = 'User';
 export const userModelName = 'user';
 
 export interface UserAttributes {
-	id: number;
+	id: string;
 	name: string;
 	email: string;
 	password: string;
@@ -108,7 +108,7 @@ export interface UserAttributes {
 export type UserCreationAttributes = Optional<UserAttributes, 'id'>;
 
 class User extends Model<UserAttributes, UserCreationAttributes> {
-	declare id: number;
+	declare id: string;
 	declare name: string;
 	declare email: string;
 	declare password: string;
