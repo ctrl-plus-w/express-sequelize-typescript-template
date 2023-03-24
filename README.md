@@ -16,7 +16,7 @@ The project includes eight scripts. Three for the development stage and four for
 - `dev:db:update` : Like the `db:update` command without having to build the sources
 - `link` : Check for eslint linting errors
 
-Two additional scripts are provided :
+Three additional scripts are provided :
 - `clean` : Remove the `/dist` folder
 - `compile` : Compile the Typescript into Javascript
 - `postcompile` : Changes the Typescript aliases path to relative paths 
