@@ -6,7 +6,7 @@ This repository is a template for an ExpressJS Typescript back-end with Sequeliz
 
 The project's env variable need by default is the `CLIENT_URL` variable which is used by the cors middleware to allow only this URL. An other env variable is available : the `PORT` variable which sets the server listening port for requests (5500 by default).
 
-The project includes eight commands. Three for the development stage and four for the production stage.
+The project includes eight scripts. Three for the development stage and four for the production stage.
 - `build` : Compile and build the `/src` folder and files into the `/dist` folder.
 - `start` : Run the server on the port specified on the `.env` file (if the port isn't specified, the 5500 port is used).
 - `db:setup` : Setup the database, synchronise the tables and seeds from the `database/seed.ts` file. (Warning: every table is dropped and re-created, so all the content will be erased)
@@ -15,6 +15,11 @@ The project includes eight commands. Three for the development stage and four fo
 - `dev:db:setup` : Like the `db:setup` command without having to build the sources
 - `dev:db:update` : Like the `db:update` command without having to build the sources
 - `link` : Check for eslint linting errors
+
+Two additional scripts are provided :
+- `clean` : Remove the `/dist` folder
+- `compile` : Compile the Typescript into Javascript
+- `postcompile` : Changes the Typescript aliases path to relative paths 
 
 ## Project Structure
 
