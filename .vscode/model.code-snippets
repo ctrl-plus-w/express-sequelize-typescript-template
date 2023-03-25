@@ -4,8 +4,12 @@
     "body": [
 		"import { Sequelize, Optional, UUIDV4, Model, UUID } from 'sequelize';",
 		"",
+		"import { AvailableModelAttributes } from '@type/model';",
+		"",
 		"export const $1TableName = '${1/(.*)/${1:/capitalize}/}';",
 		"export const $1ModelName = '$1';",
+		"",
+		"export type Available${1/(.*)/${1:/capitalize}/}Attributes = AvailableModelAttributes<${1/(.*)/${1:/capitalize}/}Attributes>;",
 		"",
 		"export interface ${1/(.*)/${1:/capitalize}/}Attributes {",
 		"\tid: string;",

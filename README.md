@@ -95,8 +95,12 @@ import {
 
 import Role from '@model/Role';
 
+import { AvailableModelAttributes } from '@type/model';
+
 export const userTableName = 'User';
 export const userModelName = 'user';
+
+export type AvailableUserAttributes = AvailableModelAttributes<UserAttributes>;
 
 export interface UserAttributes {
 	id: string;
