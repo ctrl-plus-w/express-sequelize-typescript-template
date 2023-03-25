@@ -51,6 +51,7 @@
 	"Sequelize Models Association Has Many": {
 		"prefix": ["sequelize-models-has-many", "smhm"],
 		"body": [
+		"declare $1s?: ${1/(.*)/${1:/capitalize}/};",
 		"declare get$1s: HasManyGetAssociationsMixin<${1/(.*)/${1:/capitalize}/}>;",
 		"declare count${1/(.*)/${1:/capitalize}/}s: HasManyCountAssociationsMixin;",
 		"declare has${1/(.*)/${1:/capitalize}/}: HasManyHasAssociationMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
@@ -69,6 +70,7 @@
 	"Sequelize Models Association Belongs To": {
 		"prefix": ["sequelize-models-belongs-to", "smbt"],
 		"body": [
+			"declare $1?: ${1/(.*)/${1:/capitalize}/};",
 			"declare get$1: BelongsToGetAssociationMixin<${1/(.*)/${1:/capitalize}/}>;",
 			"declare set${1/(.*)/${1:/capitalize}/}: BelongsToSetAssociationMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",
 			"declare create${1/(.*)/${1:/capitalize}/}: BelongsToCreateAssociationMixin<${1/(.*)/${1:/capitalize}/}>;",
@@ -80,6 +82,7 @@
 	"Sequelize Models Association Belongs To Many": {
 		"prefix": ["sequelize-models-belongs-to-many", "smbtm"],
 		"body": [
+			"declare $1s?: ${1/(.*)/${1:/capitalize}/};",
 			"declare get$1s: BelongsToManyGetAssociationsMixin<${1/(.*)/${1:/capitalize}/}>;",
 			"declare count${1/(.*)/${1:/capitalize}/}s: BelongsToManyCountAssociationsMixin;",
 			"declare has${1/(.*)/${1:/capitalize}/}: BelongsToManyHasAssociationMixin<${1/(.*)/${1:/capitalize}/}, typeof UUID>;",

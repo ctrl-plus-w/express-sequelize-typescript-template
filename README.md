@@ -117,6 +117,7 @@ class User extends Model<UserAttributes, UserCreationAttributes> {
 	declare email: string;
 	declare password: string;
 
+	declare role?: Role;
 	declare getRole: HasOneGetAssociationMixin<Role>;
 	declare setRole: HasOneSetAssociationMixin<Role, typeof UUID>;
 	declare createRole: HasOneCreateAssociationMixin<Role>;
